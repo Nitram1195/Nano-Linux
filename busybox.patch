@@ -1,0 +1,20 @@
+--- .config	2022-03-12 15:34:04.559322254 +0100
++++ .config.modified	2022-03-12 15:34:30.503753061 +0100
+@@ -1,7 +1,7 @@
+ #
+ # Automatically generated make config: don't edit
+ # Busybox version: 1.35.0
+-# Sat Mar 12 15:07:09 2022
++# Sat Mar 12 15:34:30 2022
+ #
+ CONFIG_HAVE_DOT_CONFIG=y
+ 
+@@ -40,7 +40,7 @@
+ #
+ # Build Options
+ #
+-# CONFIG_STATIC is not set
++CONFIG_STATIC=y
+ # CONFIG_PIE is not set
+ # CONFIG_NOMMU is not set
+ # CONFIG_BUILD_LIBBUSYBOX is not set
