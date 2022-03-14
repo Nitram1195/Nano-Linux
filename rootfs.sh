@@ -2,8 +2,13 @@
 
 mkdir -p initramfs
 cd initramfs
-mkdir -p {bin,dev,sbin,etc,proc,sys/kernel/debug,usr/{bin,sbin},lib,lib64,mnt/root,root}
+mkdir -p {bin,dev,sbin,etc,proc,sys/kernel/debug,usr/{bin,sbin},lib,mnt/root,root}
 cp -r ../build/busybox-1.35.0/_install/* .
+cp -r ~/x-tools/x86_64-unknown-linux-gnu/x86_64-unknown-linux-gnu/sysroot/* .
+
+ln -s lib lib64
+cp ../main bin
+cp ../main-static bin
 sudo cp -av /dev/{null,console,tty,sda1} dev/
 
 cat <<EOF > init

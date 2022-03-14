@@ -11,6 +11,7 @@ wget -qO- https://mirrors.edge.kernel.org/pub/linux/kernel/v$KERN_SUBVERSION.x/l
 
 cd $BUILD_DIR/linux-$KERN_VERSION
 make allnoconfig
+#make defconfig
 echo "Applying patch ..."
 patch -s -p0 < ../../config.patch
 echo "Building kernel ..."
