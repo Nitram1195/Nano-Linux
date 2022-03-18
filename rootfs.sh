@@ -9,13 +9,13 @@ cp -r ~/x-tools/x86_64-unknown-linux-gnu/x86_64-unknown-linux-gnu/sysroot/* .
 ln -s lib lib64
 cp ../main bin
 cp ../main-static bin
-sudo cp -av /dev/{null,console,tty,sda1} dev/
 
 cat <<EOF > init
 #!/bin/sh
  
 mount -t proc none /proc
 mount -t sysfs none /sys
+mount -t devtmpfs devtmpfs /dev
 mount -t debugfs none /sys/kernel/debug
  
 exec /bin/sh
